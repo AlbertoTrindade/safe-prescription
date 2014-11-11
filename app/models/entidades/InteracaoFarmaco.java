@@ -61,4 +61,16 @@ public class InteracaoFarmaco extends Model{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public boolean equals(Object object){
+		InteracaoFarmaco interacaoFarmaco = (InteracaoFarmaco)object;
+		
+		if ((this.farmaco1.getIdFarmaco() == interacaoFarmaco.farmaco1.getIdFarmaco() && this.farmaco2.getIdFarmaco() == interacaoFarmaco.farmaco2.getIdFarmaco()) ||
+			(this.farmaco1.getIdFarmaco() == interacaoFarmaco.farmaco2.getIdFarmaco() && this.farmaco2.getIdFarmaco() == interacaoFarmaco.farmaco1.getIdFarmaco())){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }
