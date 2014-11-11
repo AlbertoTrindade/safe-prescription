@@ -61,4 +61,16 @@ public class InteracaoQuadroClinico extends Model{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	
+	public boolean equals(Object object){
+		InteracaoQuadroClinico interacaoQuadroClinico = (InteracaoQuadroClinico)object;
+		
+		if (this.farmaco.getIdFarmaco() == interacaoQuadroClinico.farmaco.getIdFarmaco() && 
+			this.quadroClinico.getIdQuadroClinico() == interacaoQuadroClinico.quadroClinico.getIdQuadroClinico()){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }
