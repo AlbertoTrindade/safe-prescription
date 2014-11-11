@@ -11,10 +11,9 @@ import javax.persistence.OneToOne;
 
 import play.data.validation.Constraints.Required;
 import play.db.ebean.Model;
-import play.db.ebean.Model.Finder;
 
 @Entity
-public class Paciente {
+public class Paciente extends Model{
 
 	@Id
 	private long idPaciente;
@@ -22,7 +21,7 @@ public class Paciente {
 	@Required
 	private String nome;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Endereco endereco;
 	
 	@Required
