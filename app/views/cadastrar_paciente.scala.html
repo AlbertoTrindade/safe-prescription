@@ -89,7 +89,7 @@
               </div>
 
               <div class="row spacing">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                   <input id="bairro_input" name="bairro" type="text" class="form-control" placeholder="Bairro">
                 </div>
                 <div class="col-lg-4">
@@ -98,7 +98,7 @@
                 <div class="col-lg-3">
                   <input id="cep_input" name="cep" type="text" class="form-control" placeholder="CEP">
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     <select name="estado" class="form-control">
                       <option value="AC">AC</option>
                       <option value="AL">AL</option>
@@ -140,13 +140,6 @@
 
                   <h4 class="titulo-sessao">Quadro Clínico</h4>
 
-                  <div class="input-group spacing">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                  </div>
-
                   <div class="list-group list-scroll">
 
                     @for(quadro <-lists.quadrosList){
@@ -170,13 +163,6 @@
                 <div class="col-lg-6">
 
                   <h4 class="titulo-sessao">Alergias</h4>
-
-                  <div class="input-group spacing">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                  </div>
 
                   <div class="list-group list-scroll">
 
