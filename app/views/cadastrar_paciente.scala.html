@@ -1,3 +1,4 @@
+@(lists: views.ListViewModel)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -147,60 +148,18 @@
 
                   <div class="list-group list-scroll">
 
-                    <div class="list-group-item">
+                    @for(quadro <-lists.quadrosList){
+                      <div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Asma</p>
+                            <p style="margin-bottom:0px;">@quadro.getNome()</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="checkbox">
                           </div>
                         </div>
                     </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Diabetes</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Gravidez</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Hipertensão</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Obesidade</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
+                    }                    
 
                   </div>
                 </div>
@@ -220,62 +179,19 @@
 
                   <div class="list-group list-scroll">
 
+                    @for(farmaco <-lists.farmacoList){
+
                     <div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Azitromicina</p>
+                            <p style="margin-bottom:0px;">@farmaco.getNome()</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="checkbox">
                           </div>
                         </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Corticóide</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Dipirona</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Hidroclorotiazida</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Paracetamol</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-                    
+                    </div>                    
+                    }
                   </div>
                 </div>
 
