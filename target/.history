@@ -37,3 +37,5 @@ tasks
 ~run
 reload
 run
+h2-browser
+run

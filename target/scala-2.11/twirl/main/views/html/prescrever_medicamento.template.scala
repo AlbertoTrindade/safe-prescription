@@ -20,13 +20,14 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object prescrever_medicamento extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object prescrever_medicamento extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[views.PrescreverMedicamentoModeView,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(lists: views.PrescreverMedicamentoModeView):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+Seq[Any](format.raw/*1.46*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
@@ -34,15 +35,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
     <title>SafePrescription - Documentos</title>
 
-    <link rel="icon"  href=""""),_display_(/*9.30*/routes/*9.36*/.Assets.at("/public/images/" ,"favicon.gif")),format.raw/*9.80*/("""" type="image/x-icon"/>
-    <link rel="shortcut icon" href=""""),_display_(/*10.38*/routes/*10.44*/.Assets.at("/public/images/" , "favicon.gif")),format.raw/*10.89*/("""" type="image/x-icon"/> 
-    <link rel="stylesheet" type="text/css" href=""""),_display_(/*11.51*/routes/*11.57*/.Assets.at("/public/stylesheets/", "styles.css")),format.raw/*11.105*/(""""/>
-    <link rel="stylesheet" type="text/css" href=""""),_display_(/*12.51*/routes/*12.57*/.Assets.at("/public/stylesheets/","bootstrap-theme.css")),format.raw/*12.113*/(""""/>
-    <link rel="stylesheet" type="text/css" href=""""),_display_(/*13.51*/routes/*13.57*/.Assets.at("/public/stylesheets/","bootstrap.css")),format.raw/*13.107*/(""""/>
+    <link rel="icon"  href=""""),_display_(/*10.30*/routes/*10.36*/.Assets.at("/public/images/" ,"favicon.gif")),format.raw/*10.80*/("""" type="image/x-icon"/>
+    <link rel="shortcut icon" href=""""),_display_(/*11.38*/routes/*11.44*/.Assets.at("/public/images/" , "favicon.gif")),format.raw/*11.89*/("""" type="image/x-icon"/> 
+    <link rel="stylesheet" type="text/css" href=""""),_display_(/*12.51*/routes/*12.57*/.Assets.at("/public/stylesheets/", "styles.css")),format.raw/*12.105*/(""""/>
+    <link rel="stylesheet" type="text/css" href=""""),_display_(/*13.51*/routes/*13.57*/.Assets.at("/public/stylesheets/","bootstrap-theme.css")),format.raw/*13.113*/(""""/>
+    <link rel="stylesheet" type="text/css" href=""""),_display_(/*14.51*/routes/*14.57*/.Assets.at("/public/stylesheets/","bootstrap.css")),format.raw/*14.107*/(""""/>
 
-    <script type="text/javascript" src=""""),_display_(/*15.42*/routes/*15.48*/.Assets.at("/public/javascripts/", "jquery-1.11.1.min.js")),format.raw/*15.106*/(""""></script>
-    <script type="text/javascript" src=""""),_display_(/*16.42*/routes/*16.48*/.Assets.at("/public/javascripts/", "bootstrap.js")),format.raw/*16.98*/(""""></script>
-    <script type="text/javascript" src=""""),_display_(/*17.42*/routes/*17.48*/.Assets.at("/public/javascripts/", "scripts.js")),format.raw/*17.96*/(""""></script>
+    <script type="text/javascript" src=""""),_display_(/*16.42*/routes/*16.48*/.Assets.at("/public/javascripts/", "jquery-1.11.1.min.js")),format.raw/*16.106*/(""""></script>
+    <script type="text/javascript" src=""""),_display_(/*17.42*/routes/*17.48*/.Assets.at("/public/javascripts/", "bootstrap.js")),format.raw/*17.98*/(""""></script>
+    <script type="text/javascript" src=""""),_display_(/*18.42*/routes/*18.48*/.Assets.at("/public/javascripts/", "scripts.js")),format.raw/*18.96*/(""""></script>
     		
   </head>
 
@@ -54,7 +55,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
       <!--start header-->
       <header>  
         <!--start logo-->
-        <a href="index" id="logo"><img src=""""),_display_(/*29.46*/routes/*29.52*/.Assets.at("/public/images/", "logo.png")),format.raw/*29.93*/("""" alt="logo"/></a> 
+        <a href="index" id="logo"><img src=""""),_display_(/*30.46*/routes/*30.52*/.Assets.at("/public/images/", "logo.png")),format.raw/*30.93*/("""" alt="logo"/></a> 
       	<!--end logo-->
   	
         <!--start menu-->
@@ -87,51 +88,19 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
 
                   <div class="list-group list-scroll">
 
-                    <div class="list-group-item">
+                    """),_display_(/*63.22*/for(paciente<- lists.pacienteList) yield /*63.56*/{_display_(Seq[Any](format.raw/*63.57*/("""
+                    """),format.raw/*64.21*/("""<div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Alberto Trindade Tavares</p>
+                            <p style="margin-bottom:0px;">"""),_display_(/*67.60*/paciente/*67.68*/.getNome()),format.raw/*67.78*/("""</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="radio">
                           </div>
                         </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">José Luiz Correia Neto</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Nicolle Chaves Cysneiros</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Rafael Lucena Cavalcanti de Oliveira</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
-                  </div>
+                    </div>                   
+                  """)))}),format.raw/*74.20*/("""
+                  """),format.raw/*75.19*/("""</div>
               <!--*******************************************-->          
 
                 <!--Medicamentos-->
@@ -153,7 +122,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
                             <p style="margin-bottom:0px;">Alenia</p>
                           </div>
                           <div class="col-lg-1">
-                            <input id="alenia" type="checkbox" onclick="if(this.checked)"""),format.raw/*128.89*/("""{"""),format.raw/*128.90*/("""$('#expansao_alenia').collapse('show')"""),format.raw/*128.128*/("""}"""),format.raw/*128.129*/("""else"""),format.raw/*128.133*/("""{"""),format.raw/*128.134*/("""$('#expansao_alenia').collapse('hide')"""),format.raw/*128.172*/("""}"""),format.raw/*128.173*/("""">
+                            <input id="alenia" type="checkbox" onclick="if(this.checked)"""),format.raw/*97.89*/("""{"""),format.raw/*97.90*/("""$('#expansao_alenia').collapse('show')"""),format.raw/*97.128*/("""}"""),format.raw/*97.129*/("""else"""),format.raw/*97.133*/("""{"""),format.raw/*97.134*/("""$('#expansao_alenia').collapse('hide')"""),format.raw/*97.172*/("""}"""),format.raw/*97.173*/("""">
                           </div>
                           <div id="expansao_alenia" class="collapse expansao" role="tabpanel">
                             <div class="row">
@@ -168,51 +137,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
                         </div>
                     </div>
 
-                    <div class="list-group-item">
+                    """),_display_(/*112.22*/for(medicamento <- lists.medicamentoList) yield /*112.63*/{_display_(Seq[Any](format.raw/*112.64*/("""
+
+                    """),format.raw/*114.21*/("""<div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Budesonida</p>
+                            <p style="margin-bottom:0px;">"""),_display_(/*117.60*/medicamento/*117.71*/.getNome()),format.raw/*117.81*/("""</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="checkbox">
                           </div>
                         </div>
                     </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Gestinol 28</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Ibuprofeno</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Nasonex</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                <!--************************************************-->
+                    """)))}),format.raw/*124.22*/("""
+                """),format.raw/*125.17*/("""<!--************************************************-->
 
               </div>
 
@@ -238,20 +176,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Stric
 """))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(lists:views.PrescreverMedicamentoModeView): play.twirl.api.HtmlFormat.Appendable = apply(lists)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((views.PrescreverMedicamentoModeView) => play.twirl.api.HtmlFormat.Appendable) = (lists) => apply(lists)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 11 21:39:01 GMT-03:00 2014
-                  SOURCE: C:/git/safe-prescription/app/views/prescrever_medicamento.scala.html
-                  HASH: 9c5ed39d3783419c039720816bc9e8c86afe7404
-                  MATRIX: 815->0|1182->341|1196->347|1260->391|1349->453|1364->459|1430->504|1533->580|1548->586|1618->634|1700->689|1715->695|1793->751|1875->806|1890->812|1962->862|2037->910|2052->916|2132->974|2213->1028|2228->1034|2299->1084|2380->1138|2395->1144|2464->1192|2713->1414|2728->1420|2790->1461|6811->5453|6841->5454|6909->5492|6940->5493|6974->5497|7005->5498|7073->5536|7104->5537
-                  LINES: 29->1|37->9|37->9|37->9|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|57->29|57->29|57->29|156->128|156->128|156->128|156->128|156->128|156->128|156->128|156->128
+                  DATE: Wed Nov 12 12:24:50 CST 2014
+                  SOURCE: /home/alberto/Documents/java_projects/safe-prescription/app/views/prescrever_medicamento.scala.html
+                  HASH: 441f05778827c2af9474c83400a83aa28b05b949
+                  MATRIX: 769->1|901->45|928->46|1288->379|1303->385|1368->429|1456->490|1471->496|1537->541|1639->616|1654->622|1724->670|1805->724|1820->730|1898->786|1979->840|1994->846|2066->896|2139->942|2154->948|2234->1006|2314->1059|2329->1065|2400->1115|2480->1168|2495->1174|2564->1222|2801->1432|2816->1438|2878->1479|3971->2545|4021->2579|4060->2580|4109->2601|4317->2782|4334->2790|4365->2800|4661->3065|4708->3084|5748->4096|5777->4097|5844->4135|5874->4136|5907->4140|5937->4141|6004->4179|6034->4180|6843->4961|6901->5002|6941->5003|6992->5025|7201->5206|7222->5217|7254->5227|7537->5478|7583->5495
+                  LINES: 26->1|29->1|30->2|38->10|38->10|38->10|39->11|39->11|39->11|40->12|40->12|40->12|41->13|41->13|41->13|42->14|42->14|42->14|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|58->30|58->30|58->30|91->63|91->63|91->63|92->64|95->67|95->67|95->67|102->74|103->75|125->97|125->97|125->97|125->97|125->97|125->97|125->97|125->97|140->112|140->112|140->112|142->114|145->117|145->117|145->117|152->124|153->125
                   -- GENERATED --
               */
           

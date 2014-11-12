@@ -1,6 +1,6 @@
-// @SOURCE:C:/git/safe-prescription/conf/routes
-// @HASH:25d431d47877dadbcc61b65e6f4d6ca89c3078fa
-// @DATE:Tue Nov 11 21:39:01 GMT-03:00 2014
+// @SOURCE:/home/alberto/Documents/java_projects/safe-prescription/conf/routes
+// @HASH:40706afe1e43cd7e455976e9fc63f6755bb5a967
+// @DATE:Wed Nov 12 12:24:47 CST 2014
 
 package controllers;
 

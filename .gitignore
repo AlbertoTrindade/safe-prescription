@@ -1,8 +1,7 @@
-logs
-project/project
-project/target
-target
-tmp
+logs/
+project/
+target/
+tmp/
 .history
 dist
 /.idea

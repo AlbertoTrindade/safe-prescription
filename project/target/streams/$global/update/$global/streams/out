@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/git/safe-prescription/project/}safe-prescription-build...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/alberto/Documents/java_projects/safe-prescription/project/}safe-prescription-build...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#safe-prescription-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -12678,8 +12678,8 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbt#sbt-js-engine;1.0.1!sbt-js-engine.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.sbt#sbt-webdriver;1.0.0!sbt-webdriver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#io;0.13.5!io.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#io;0.13.5!io.jar(src)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#io;0.13.5!io.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.5!control.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalacheck#scalacheck_2.10;1.11.1!scalacheck_2.10.jar[0m
@@ -12843,19 +12843,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 7281ms :: artifacts dl 205ms[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT compile produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT runtime produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT test produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT provided produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT optional produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT compile-internal produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT runtime-internal produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT test-internal produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT plugin produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT sources produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT docs produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT pom produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT scala-tool produced in C:\git\safe-prescription\project\target\resolution-cache\reports\default-safe-prescription-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (7281ms resolve - 205ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 13631ms :: artifacts dl 388ms[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT compile produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT runtime produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT test produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT provided produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT optional produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT compile-internal produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT runtime-internal produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT test-internal produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT plugin produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT sources produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT docs produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT pom produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#safe-prescription-build;0.1-SNAPSHOT scala-tool produced in /home/alberto/Documents/java_projects/safe-prescription/project/target/resolution-cache/reports/default-safe-prescription-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (13631ms resolve - 388ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -1,7 +1,6 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\.DS_Store,C:\git\safe-prescription\target\scala-2.11\classes\.DS_Store)[0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\application.conf,C:\git\safe-prescription\target\scala-2.11\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\evolutions,C:\git\safe-prescription\target\scala-2.11\classes\evolutions)[0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\routes,C:\git\safe-prescription\target\scala-2.11\classes\routes)[0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\evolutions\default,C:\git\safe-prescription\target\scala-2.11\classes\evolutions\default)[0m
-[0m[[0mdebug[0m] [0m	(C:\git\safe-prescription\conf\evolutions\default\1.sql,C:\git\safe-prescription\target\scala-2.11\classes\evolutions\default\1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/home/alberto/Documents/java_projects/safe-prescription/conf/application.conf,/home/alberto/Documents/java_projects/safe-prescription/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/alberto/Documents/java_projects/safe-prescription/conf/evolutions,/home/alberto/Documents/java_projects/safe-prescription/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/alberto/Documents/java_projects/safe-prescription/conf/routes,/home/alberto/Documents/java_projects/safe-prescription/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/alberto/Documents/java_projects/safe-prescription/conf/evolutions/default,/home/alberto/Documents/java_projects/safe-prescription/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/alberto/Documents/java_projects/safe-prescription/conf/evolutions/default/1.sql,/home/alberto/Documents/java_projects/safe-prescription/target/scala-2.11/classes/evolutions/default/1.sql)[0m
