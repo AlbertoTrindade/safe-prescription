@@ -25,7 +25,7 @@ public class CadastroInteracaoQuadroClinico {
 				for(QuadroClinico quadroClinico : quadrosClinicos){
 					InteracaoQuadroClinico interacaoQuadroClinico = repositorioInteracaoQuadroClinico.getInteracaoQuadroClinico(farmaco.getIdFarmaco(), quadroClinico.getIdQuadroClinico());
 					
-					if(interacaoQuadroClinico != null){
+					if(interacaoQuadroClinico != null && !interacoesQuadroClinico.contains(interacaoQuadroClinico)){
 						interacoesQuadroClinico.add(interacaoQuadroClinico);
 					}
 				}
