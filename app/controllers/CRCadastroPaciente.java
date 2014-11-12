@@ -3,6 +3,7 @@ package controllers;
 import play.mvc.*;
 import models.Fachada;
 import java.util.List;
+import java.util.Map;
 import models.entidades.QuadroClinico;
 import models.entidades.Farmaco;
 import views.CadastrarPacienteModelView;
@@ -24,7 +25,11 @@ public class CRCadastroPaciente extends Controller {
 	}
 
 	public static Result cadastrarPaciente() {
-
+		
+		final Map<String, String[]> values = request().body().asFormUrlEncoded();
+		
+		
+		
 		return TODO;
 	}
 
