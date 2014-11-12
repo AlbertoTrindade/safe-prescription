@@ -1,5 +1,6 @@
 package models.entidades;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Prescricao {
@@ -10,12 +11,12 @@ public class Prescricao {
 	private List<InteracaoQuadroClinico> interacoesQuadroClinico;
 	private List<Farmaco> alergias;
 	
-	public Prescricao(Paciente paciente, List<PrescricaoItem> prescricaoItems, List<InteracaoFarmaco> interacoesFarmaco, List<InteracaoQuadroClinico> interacoesQuadroClinico, List<Farmaco> alergias){
+	public Prescricao(Paciente paciente, List<PrescricaoItem> prescricaoItems){
 		this.paciente = paciente;
 		this.prescricaoItems = prescricaoItems;
-		this.interacoesFarmaco = interacoesFarmaco;
-		this.interacoesQuadroClinico = interacoesQuadroClinico;
-		this.alergias = alergias;
+		this.interacoesFarmaco = new ArrayList<InteracaoFarmaco>();
+		this.interacoesQuadroClinico = new ArrayList<InteracaoQuadroClinico>();
+		this.alergias = new ArrayList<Farmaco>();
 	}
 
 	public Paciente getPaciente() {

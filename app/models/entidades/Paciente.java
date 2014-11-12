@@ -128,4 +128,8 @@ public class Paciente extends Model{
 	public void setAlergias(List<Farmaco> alergias) {
 		this.alergias = alergias;
 	}
+	
+	public String toString(){
+		return this.nome;
+	} 
 }
