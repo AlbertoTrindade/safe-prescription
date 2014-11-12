@@ -29,8 +29,14 @@ public class ControladorPaciente {
 		cadastroQuadroClinico = new CadastroQuadroClinico(repositorioQuadroClinico);
 	}
 	
-	public void cadastrarPaciente(Paciente paciente){
-		cadastroPaciente.adicionarPaciente(paciente);
+	public boolean cadastrarPaciente(Paciente paciente){
+		if(cadastroPaciente.verificarPaciente(paciente)){
+			cadastroPaciente.adicionarPaciente(paciente);
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 	public List<QuadroClinico> listarQuadrosClinicos(){

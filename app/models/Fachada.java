@@ -32,8 +32,8 @@ public class Fachada {
 		return instancia;
 	}
 	
-	public void cadastrarPaciente(Paciente paciente){
-		controladorPaciente.cadastrarPaciente(paciente);
+	public boolean cadastrarPaciente(Paciente paciente){
+		return controladorPaciente.cadastrarPaciente(paciente);
 	}
 	
 	public List<QuadroClinico> listarQuadrosClinicos(){
