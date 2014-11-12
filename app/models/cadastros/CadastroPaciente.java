@@ -21,7 +21,7 @@ public class CadastroPaciente {
 		repositorioPaciente.adicionarPaciente(paciente);
 	}
 	
-	public List<Paciente> listarPaciente(){
+	public List<Paciente> listarPacientes(){
 		return repositorioPaciente.listarPacientes();
 	}
 }

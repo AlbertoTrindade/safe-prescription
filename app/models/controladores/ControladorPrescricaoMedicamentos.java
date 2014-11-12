@@ -59,7 +59,7 @@ public class ControladorPrescricaoMedicamentos {
 	}
 	
 	public List<Paciente> listarPacientes(){
-		return cadastroPaciente.listarPaciente();
+		return cadastroPaciente.listarPacientes();
 	}
 	
 	public List<Medicamento> listarMedicamentos(){
