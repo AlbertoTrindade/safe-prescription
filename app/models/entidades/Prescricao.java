@@ -10,12 +10,12 @@ public class Prescricao {
 	private List<InteracaoQuadroClinico> interacoesQuadroClinico;
 	private List<Farmaco> alergias;
 	
-	public Prescricao(Paciente paciente, List<PrescricaoItem> prescricaoItems, List<InteracaoFarmaco> interacoesFarmaco, List<InteracaoQuadroClinico> interacoesQuadroClinico, List<Farmaco> farmacos){
+	public Prescricao(Paciente paciente, List<PrescricaoItem> prescricaoItems, List<InteracaoFarmaco> interacoesFarmaco, List<InteracaoQuadroClinico> interacoesQuadroClinico, List<Farmaco> alergias){
 		this.paciente = paciente;
 		this.prescricaoItems = prescricaoItems;
 		this.interacoesFarmaco = interacoesFarmaco;
 		this.interacoesQuadroClinico = interacoesQuadroClinico;
-		this.alergias = farmacos;
+		this.alergias = alergias;
 	}
 
 	public Paciente getPaciente() {
@@ -51,11 +51,11 @@ public class Prescricao {
 		this.interacoesQuadroClinico = interacoesQuadroClinico;
 	}
 
-	public List<Farmaco> getFarmacos() {
+	public List<Farmaco> getAlergias() {
 		return alergias;
 	}
 
-	public void setFarmacos(List<Farmaco> farmacos) {
-		this.alergias = farmacos;
+	public void setAlergias(List<Farmaco> alergias) {
+		this.alergias = alergias;
 	}
 }
