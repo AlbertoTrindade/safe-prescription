@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>SafePrescription - Documentos</title>
+
+    <link rel="icon"  href="@routes.Assets.at("/public/images/" ,"favicon.gif")" type="image/x-icon"/>
+    <link rel="shortcut icon" href="@routes.Assets.at("/public/images/" , "favicon.gif")" type="image/x-icon"/> 
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/", "styles.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap-theme.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap.css")"/>
+
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "bootstrap.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "scripts.js")"></script>
+    		
+  </head>
+
+  <body>
+  	
+    <!--start container-->
+    <div id="container">
+
+      <!--start header-->
+      <header>  
+        <!--start logo-->
+        <a href="index" id="logo"><img src="@routes.Assets.at("/public/images/", "logo.png")" alt="logo"/></a> 
+      	<!--end logo-->
+  	
+        <!--start menu-->
+      	<nav>
+          <ul>
+            <li><a href="cadastrar_paciente">Cadastrar Paciente</a></a></li>
+          	<li><a href="prescrever_medicamento" class="current">Prescrever Medicações</a></a></li>
+          </ul>
+        </nav>
+        <!--end menu-->
+      
+    	</header>
+      <!--end header-->
+
+      <!--start intro-->
+      <div class="intro-2" >
+      
+            <h3 class="titulo">Prescrever Medicamentos</h3>
+            <form>
+
+              <!--Pesquisar Paciente-->
+              <h4 class="titulo-sessao">Pesquisar Paciente</h4>
+
+              <div class="input-group spacing">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="list-group list-scroll">
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Alberto Trindade Tavares</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">José Luiz Correia Neto</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Nicolle Chaves Cysneiros</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Rafael Lucena Cavalcanti de Oliveira</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+              <!--*******************************************-->          
+
+                <!--Medicamentos-->
+
+                  <h4 class="titulo-sessao">Medicamentos</h4>
+
+                  <div class="input-group spacing">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                  </div>
+
+                  <div id="lista_medicamentos" class="list-group list-scroll">
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Alenia</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input id="alenia" type="checkbox" onclick="if(this.checked){$('#expansao_alenia').collapse('show')}else{$('#expansao_alenia').collapse('hide')}">
+                          </div>
+                          <div id="expansao_alenia" class="collapse expansao" role="tabpanel">
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <textarea id="posologia_input" type="text" class="form-control" placeholder="Posologia" rows="3"></textarea>
+                              </div>
+                              <div class="col-lg-6">
+                                <textarea id="posologia_input" type="text" class="form-control" placeholder="Via" rows="3"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Budesonida</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Gestinol 28</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Ibuprofeno</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Nasonex</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                <!--************************************************-->
+
+              </div>
+
+              <button type="button" class="btn btn-style">Cadastrar</button>
+
+            </form>
+      </div>
+      <!--end intro-->
+
+    </div>
+     <!--end container-->
+     
+    <!--start footer-->
+    <footer>
+      <div class="container">  
+        <div id="FooterTwo"> © 2014 SafePrescription </div>
+      </div>
+    </footer>
+    <!--end footer-->
+
+  </body>
+</html>

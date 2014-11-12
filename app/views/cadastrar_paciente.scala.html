@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>SafePrescription - Documentos</title>
+
+    <link rel="icon" href="@routes.Assets.at("/public/images/", "favicon.gif")" type="image/x-icon"/>
+    <link rel="shortcut icon" href="@routes.Assets.at("/public/images/", "favicon.gif")" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/", "styles.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap-theme.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap.css")"/>
+
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "bootstrap.js")"></script>
+    		
+  </head>
+
+  <body>
+  	
+    <!--start container-->
+    <div id="container">
+
+      <!--start header-->
+      <header>  
+        <!--start logo-->
+        <a href="index" id="logo"><img src="@routes.Assets.at("/public/images/", "logo.png")" alt="logo"/></a> 
+      	<!--end logo-->
+  	
+        <!--start menu-->
+      	<nav>
+          <ul>
+            <li><a href="cadastrar_paciente" class="current">Cadastrar Paciente</a></a></li>
+          	<li><a href="prescrever_medicamento">Prescrever Medicações</a></a></li>
+          </ul>
+        </nav>
+        <!--end menu-->
+      
+    	</header>
+      <!--end header-->
+
+      <!--start intro-->
+      <div class="intro-2" >
+      
+            <h3 class="titulo">Cadastrar Paciente</h3>
+            <form>
+
+              <!--Informações Básicas-->
+              <h4 class="titulo-sessao">Informações Básicas</h4>
+
+              <input id="nome_input" type="text" class="form-control spacing" placeholder="Nome do Paciente">
+
+              <div class="row spacing">
+                <div class="col-lg-3">
+                  <input id="cpf_input" type="text" class="form-control" placeholder="CPF">
+                </div>
+                <div class="col-lg-3">
+                  <input id="data_nasc_input" type="text" class="form-control" placeholder="Data de Nascimento">
+                </div>
+                <div class="col-lg-3">
+                  <input id="tel_celular_input" type="text" class="form-control" placeholder="Telefone Celular">
+                </div>
+                <div class="col-lg-3">
+                  <input id="tel_fixo_input" type="text" class="form-control" placeholder="Telefone Fixo">
+                </div>
+              </div>
+              <!--*******************************************-->
+
+              <!--Endereço-->
+              <h4 class="titulo-sessao">Endereço</h4>
+
+              <div class="row spacing">
+                <div class="col-lg-8">
+                  <input id="logradouro_input" type="text" class="form-control" placeholder="Logradouro">
+                </div>
+                <div class="col-lg-2">
+                  <input id="numero_input" type="text" class="form-control" placeholder="Número">
+                </div>
+                <div class="col-lg-2">
+                  <input id="complemento_input" type="text" class="form-control" placeholder="Complemento">
+                </div>
+              </div>
+
+              <div class="row spacing">
+                <div class="col-lg-4">
+                  <input id="bairro_input" type="text" class="form-control" placeholder="Bairro">
+                </div>
+                <div class="col-lg-4">
+                  <input id="cidade_input" type="text" class="form-control" placeholder="Cidade">
+                </div>
+                <div class="col-lg-3">
+                  <input id="cep_input" type="text" class="form-control" placeholder="CEP">
+                </div>
+                <div class="col-lg-1">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="padding-right:10px;padding-left:9px;">
+                      UF <span class="caret"></span>
+                    </button>
+                    <ul id="dropdown-estados" class="dropdown-menu" role="menu">
+                      <li><a href="#" value="AC">AC</a></li>
+                      <li><a href="#" value="AL">AL</a></li>
+                      <li><a href="#" value="AM">AM</a></li>
+                      <li><a href="#" value="AP">AP</a></li>
+                      <li><a href="#" value="BA">BA</a></li>
+                      <li><a href="#" value="CE">CE</a></li>
+                      <li><a href="#" value="DF">DF</a></li>
+                      <li><a href="#" value="ES">ES</a></li>
+                      <li><a href="#" value="GO">GO</a></li>
+                      <li><a href="#" value="MA">MA</a></li>
+                      <li><a href="#" value="MG">MG</a></li>
+                      <li><a href="#" value="MS">MS</a></li>
+                      <li><a href="#" value="MT">MT</a></li>
+                      <li><a href="#" value="PA">PA</a></li>
+                      <li><a href="#" value="PB">PB</a></li>
+                      <li><a href="#" value="PE">PE</a></li>
+                      <li><a href="#" value="PI">PI</a></li>
+                      <li><a href="#" value="PR">PR</a></li>
+                      <li><a href="#" value="RJ">RJ</a></li>
+                      <li><a href="#" value="RN">RN</a></li>
+                      <li><a href="#" value="RO">RO</a></li>
+                      <li><a href="#" value="RR">RR</a></li>
+                      <li><a href="#" value="RS">RS</a></li>
+                      <li><a href="#" value="SC">SC</a></li>
+                      <li><a href="#" value="SE">SE</a></li>
+                      <li><a href="#" value="SP">SP</a></li>
+                      <li><a href="#" value="TO">TO</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--************************************************-->
+              
+              <div class="row spacing">
+
+                <!--Quadros Clínicos-->
+                <div class="col-lg-6">
+
+                  <h4 class="titulo-sessao">Quadro Clínico</h4>
+
+                  <div class="input-group spacing">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="list-group list-scroll">
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Asma</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Diabetes</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Gravidez</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Hipertensão</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Obesidade</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!--************************************************-->
+
+                <!--Alergias-->
+                <div class="col-lg-6">
+
+                  <h4 class="titulo-sessao">Alergias</h4>
+
+                  <div class="input-group spacing">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                  </div>
+
+                  <div class="list-group list-scroll">
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Azitromicina</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Corticóide</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Dipirona</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Hidroclorotiazida</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-11">
+                            <p style="margin-bottom:0px;">Paracetamol</p>
+                          </div>
+                          <div class="col-lg-1">
+                            <input type="checkbox">
+                          </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!--************************************************************-->
+              </div>
+
+              <button type="button" class="btn btn-style">Cadastrar</button>
+
+            </form>
+      </div>
+      <!--end intro-->
+
+    </div>
+     <!--end container-->
+     
+    <!--start footer-->
+    <footer>
+      <div class="container">  
+        <div id="FooterTwo"> © 2014 SafePrescription </div>
+      </div>
+    </footer>
+    <!--end footer-->
+
+  </body>
+</html>
