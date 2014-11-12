@@ -1,3 +1,4 @@
+@(lists: views.PrescreverMedicamentoModeView)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -59,50 +60,18 @@
 
                   <div class="list-group list-scroll">
 
+                    @for(paciente<- lists.pacienteList){
                     <div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Alberto Trindade Tavares</p>
+                            <p style="margin-bottom:0px;">@paciente.getNome()</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="radio">
                           </div>
                         </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">José Luiz Correia Neto</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Nicolle Chaves Cysneiros</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Rafael Lucena Cavalcanti de Oliveira</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="radio">
-                          </div>
-                        </div>
-                    </div>
-
+                    </div>                   
+                  }
                   </div>
               <!--*******************************************-->          
 
@@ -140,50 +109,19 @@
                         </div>
                     </div>
 
+                    @for(medicamento <- lists.medicamentoList){
+
                     <div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Budesonida</p>
+                            <p style="margin-bottom:0px;">@medicamento.getNome()</p>
                           </div>
                           <div class="col-lg-1">
                             <input type="checkbox">
                           </div>
                         </div>
                     </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Gestinol 28</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Ibuprofeno</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Nasonex</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
-
+                    }
                 <!--************************************************-->
 
               </div>

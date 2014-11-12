@@ -13,8 +13,6 @@ public class ListViewModel {
     public ListViewModel(List<Farmaco> farmacoList,List<QuadroClinico> quadrosList ){
     	this.farmacoList=farmacoList;
     	this.quadrosList=quadrosList;
-
-
     }
 
 }
