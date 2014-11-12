@@ -7,6 +7,8 @@ GET     /                           controllers.Application.index()
 GET     /index                      controllers.Application.index()
 GET     /cadastrar_paciente			controllers.CRCadastroPaciente.index()
 GET     /prescrever_medicamento		controllers.CRPrescricaoMedicamento.index()
+POST    /salvar_paciente  			controllers.CRCadastroPaciente.cadastrarPaciente()
+POST    /salvar_prescricao  		controllers.CRPrescricaoMedicamento.prescreverMedicamento()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /images/*file             controllers.Assets.at(path="/public/images/", file)
