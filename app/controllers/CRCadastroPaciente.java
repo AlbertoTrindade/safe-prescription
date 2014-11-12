@@ -20,6 +20,8 @@ import views.CadastrarPacienteModelView;
 public class CRCadastroPaciente extends Controller {
 
 	private static Fachada fachada= Fachada.getInstancia();
+	
+	
 
 	public static Result index() {
 		 
@@ -27,7 +29,9 @@ public class CRCadastroPaciente extends Controller {
 		List<QuadroClinico> quadroList = fachada.listarQuadrosClinicos();
 		List<Farmaco> farmacoList = fachada.listarFarmacos();
 
-		CadastrarPacienteModelView listView = new CadastrarPacienteModelView(farmacoList,quadroList);		
+		CadastrarPacienteModelView  listView = new CadastrarPacienteModelView(farmacoList,quadroList);		
+		listView.ok="";
+		
 
 		return ok(views.html.cadastrar_paciente.render(listView));
 	}
@@ -92,7 +96,16 @@ public class CRCadastroPaciente extends Controller {
 		
 		Logger.info(String.valueOf(go));
 		
-		return TODO;
+		CadastrarPacienteModelView  listView = new CadastrarPacienteModelView(bancoListaFarmaco,bancoListaQuadro);		
+		
+		if(go){
+			listView.ok="ok";
+	
+		}else{
+			listView.ok="error";
+		}
+		
+		return ok(views.html.cadastrar_paciente.render(listView));
 	}
 
 }

@@ -43,7 +43,12 @@
 
       <!--start intro-->
       <div class="intro-2" >
-      
+            @if(lists.ok=="ok"){
+            <div class="alert alert-success" role="alert">Paciente cadastrado com sucesso </div>
+            }
+            @if(lists.ok=="error"){
+            <div class="alert alert-danger" role="alert">Paciente com mesmo CPF já cadastrado</div>
+            }
             <h3 class="titulo">Cadastrar Paciente</h3>
             <form method="post" action="salvar_paciente">
 
