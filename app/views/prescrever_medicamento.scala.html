@@ -46,7 +46,7 @@
       <div class="intro-2" >
       
             <h3 class="titulo">Prescrever Medicamentos</h3>
-            <form>
+            <form method="post" action="salvar_prescricao">
 
               <!--Pesquisar Paciente-->
               <h4 class="titulo-sessao">Pesquisar Paciente</h4>
@@ -81,15 +81,15 @@
                             <p style="margin-bottom:0px;">@medicamento.getNome()</p>
                           </div>
                           <div class="col-lg-1">
-                            <input id="@medicamento.getIdMedicamento()" name="medicamento" value="@medicamento.getIdMedicamento()" type="checkbox" onclick="if(this.checked){$('#expansao_@medicamento.getIdMedicamento()').collapse('show')}else{$('#expansao_@medicamento.getIdMedicamento()').collapse('hide')}">
+                            <input id="@medicamento.getIdMedicamento()" name="medicamento" value="@medicamento.getIdMedicamento()" type="checkbox" onclick="if(this.checked){var div = $('#expansao_@medicamento.getIdMedicamento()'); div.collapse('show'); $('#@medicamento.getIdMedicamento()_posologia_input').prop('disabled',false); $('#@medicamento.getIdMedicamento()_via_input').prop('disabled',false);}else{$('#expansao_@medicamento.getIdMedicamento()').collapse('hide')}">
                           </div>
                           <div id="expansao_@medicamento.getIdMedicamento()" class="collapse expansao" role="tabpanel">
                             <div class="row">
                               <div class="col-lg-6">
-                                <textarea id="posologia_input" name="posologia" type="text" class="form-control" placeholder="Posologia" rows="3"></textarea>
+                                <textarea id="@medicamento.getIdMedicamento()_posologia_input" name="posologia" type="text" class="form-control" placeholder="Posologia" rows="3" disabled="disabled"></textarea>
                               </div>
                               <div class="col-lg-6">
-                                <textarea id="posologia_input" name="via" stype="text" class="form-control" placeholder="Via" rows="3"></textarea>
+                                <textarea id="@medicamento.getIdMedicamento()_via_input" name="via" stype="text" class="form-control" placeholder="Via" rows="3" disabled="disabled"></textarea>
                               </div>
                             </div>
                           </div>
