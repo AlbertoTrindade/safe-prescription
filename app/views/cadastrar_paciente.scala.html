@@ -32,8 +32,8 @@
         <!--start menu-->
       	<nav>
           <ul>
-            <li><a href="cadastrar_paciente" class="current">Cadastrar Paciente</a></a></li>
-          	<li><a href="prescrever_medicamento">Prescrever Medicações</a></a></li>
+            <li><a href="cadastrar_paciente" class="current">Cadastrar Paciente</a></option>
+          	<li><a href="prescrever_medicamento">Prescrever Medicações</a></option>
           </ul>
         </nav>
         <!--end menu-->
@@ -50,20 +50,20 @@
               <!--Informações Básicas-->
               <h4 class="titulo-sessao">Informações Básicas</h4>
 
-              <input id="nome_input" type="text" class="form-control spacing" placeholder="Nome do Paciente">
+              <input id="nome_input" name="nome" type="text" class="form-control spacing" placeholder="Nome do Paciente">
 
               <div class="row spacing">
                 <div class="col-lg-3">
-                  <input id="cpf_input" type="text" class="form-control" placeholder="CPF">
+                  <input id="cpf_input" name="cpf" type="text" class="form-control" placeholder="CPF">
                 </div>
                 <div class="col-lg-3">
-                  <input id="data_nasc_input" type="text" class="form-control" placeholder="Data de Nascimento">
+                  <input id="data_nasc_input" name="data_nasc" type="text" class="form-control" placeholder="Data de Nascimento">
                 </div>
                 <div class="col-lg-3">
-                  <input id="tel_celular_input" type="text" class="form-control" placeholder="Telefone Celular">
+                  <input id="tel_celular_input" name="tel_celular" type="text" class="form-control" placeholder="Telefone Celular">
                 </div>
                 <div class="col-lg-3">
-                  <input id="tel_fixo_input" type="text" class="form-control" placeholder="Telefone Fixo">
+                  <input id="tel_fixo_input" name="tel_fixo" type="text" class="form-control" placeholder="Telefone Fixo">
                 </div>
               </div>
               <!--*******************************************-->
@@ -73,60 +73,56 @@
 
               <div class="row spacing">
                 <div class="col-lg-8">
-                  <input id="logradouro_input" type="text" class="form-control" placeholder="Logradouro">
+                  <input id="logradouro_input" name="logradouro" type="text" class="form-control" placeholder="Logradouro">
                 </div>
                 <div class="col-lg-2">
-                  <input id="numero_input" type="text" class="form-control" placeholder="Número">
+                  <input id="numero_input" name="numero" type="text" class="form-control" placeholder="Número">
                 </div>
                 <div class="col-lg-2">
-                  <input id="complemento_input" type="text" class="form-control" placeholder="Complemento">
+                  <input id="complemento_input" name="complemento" type="text" class="form-control" placeholder="Complemento">
                 </div>
               </div>
 
               <div class="row spacing">
                 <div class="col-lg-4">
-                  <input id="bairro_input" type="text" class="form-control" placeholder="Bairro">
+                  <input id="bairro_input" name="bairro" type="text" class="form-control" placeholder="Bairro">
                 </div>
                 <div class="col-lg-4">
-                  <input id="cidade_input" type="text" class="form-control" placeholder="Cidade">
+                  <input id="cidade_input" name="cidade" type="text" class="form-control" placeholder="Cidade">
                 </div>
                 <div class="col-lg-3">
-                  <input id="cep_input" type="text" class="form-control" placeholder="CEP">
+                  <input id="cep_input" name="cep" type="text" class="form-control" placeholder="CEP">
                 </div>
                 <div class="col-lg-1">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="padding-right:10px;padding-left:9px;">
-                      UF <span class="caret"></span>
-                    </button>
-                    <ul id="dropdown-estados" class="dropdown-menu" role="menu">
-                      <li><a href="#" value="AC">AC</a></li>
-                      <li><a href="#" value="AL">AL</a></li>
-                      <li><a href="#" value="AM">AM</a></li>
-                      <li><a href="#" value="AP">AP</a></li>
-                      <li><a href="#" value="BA">BA</a></li>
-                      <li><a href="#" value="CE">CE</a></li>
-                      <li><a href="#" value="DF">DF</a></li>
-                      <li><a href="#" value="ES">ES</a></li>
-                      <li><a href="#" value="GO">GO</a></li>
-                      <li><a href="#" value="MA">MA</a></li>
-                      <li><a href="#" value="MG">MG</a></li>
-                      <li><a href="#" value="MS">MS</a></li>
-                      <li><a href="#" value="MT">MT</a></li>
-                      <li><a href="#" value="PA">PA</a></li>
-                      <li><a href="#" value="PB">PB</a></li>
-                      <li><a href="#" value="PE">PE</a></li>
-                      <li><a href="#" value="PI">PI</a></li>
-                      <li><a href="#" value="PR">PR</a></li>
-                      <li><a href="#" value="RJ">RJ</a></li>
-                      <li><a href="#" value="RN">RN</a></li>
-                      <li><a href="#" value="RO">RO</a></li>
-                      <li><a href="#" value="RR">RR</a></li>
-                      <li><a href="#" value="RS">RS</a></li>
-                      <li><a href="#" value="SC">SC</a></li>
-                      <li><a href="#" value="SE">SE</a></li>
-                      <li><a href="#" value="SP">SP</a></li>
-                      <li><a href="#" value="TO">TO</a></li>
-                    </ul>
+                    <select name="estado" class="form-control">
+                      <option value="AC">AC</option>
+                      <option value="AL">AL</option>
+                      <option value="AM">AM</option>
+                      <option value="AP">AP</option>
+                      <option value="BA">BA</option>
+                      <option value="CE">CE</option>
+                      <option value="DF">DF</option>
+                      <option value="ES">ES</option>
+                      <option value="GO">GO</option>
+                      <option value="MA">MA</option>
+                      <option value="MG">MG</option>
+                      <option value="MS">MS</option>
+                      <option value="MT">MT</option>
+                      <option value="PA">PA</option>
+                      <option value="PB">PB</option>
+                      <option value="PE">PE</option>
+                      <option value="PI">PI</option>
+                      <option value="PR">PR</option>
+                      <option value="RJ">RJ</option>
+                      <option value="RN">RN</option>
+                      <option value="RO">RO</option>
+                      <option value="RR">RR</option>
+                      <option value="RS">RS</option>
+                      <option value="SC">SC</option>
+                      <option value="SE">SE</option>
+                      <option value="SP">SP</option>
+                      <option value="TO">TO</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -155,7 +151,7 @@
                             <p style="margin-bottom:0px;">@quadro.getNome()</p>
                           </div>
                           <div class="col-lg-1">
-                            <input type="checkbox">
+                            <input type="checkbox" name="quadro_clinico" value="@quadro.getIdQuadroClinico()">
                           </div>
                         </div>
                     </div>
@@ -187,7 +183,7 @@
                             <p style="margin-bottom:0px;">@farmaco.getNome()</p>
                           </div>
                           <div class="col-lg-1">
-                            <input type="checkbox">
+                            <input type="checkbox" name="alergia" value="@farmaco.getIdFarmaco()">
                           </div>
                         </div>
                     </div>                    
@@ -198,7 +194,7 @@
                 <!--************************************************************-->
               </div>
 
-              <button type="button" class="btn btn-style">Cadastrar</button>
+              <input type="submit" value="Cadastrar" class="btn btn-style">
 
             </form>
       </div>
