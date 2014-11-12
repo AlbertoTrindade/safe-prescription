@@ -5,7 +5,7 @@ import models.Fachada;
 import java.util.List;
 import models.entidades.Paciente;
 import models.entidades.Medicamento;
-import views.PrescreverMedicamentoModeView;
+import views.PrescreverMedicamentoModelView;
 
 public class CRPrescricaoMedicamento extends Controller {
 
@@ -16,7 +16,7 @@ public class CRPrescricaoMedicamento extends Controller {
 
 		List<Paciente> listPaciente = fachada.listarPacientes();
 		List<Medicamento> listMedicamento = fachada.listarMedicamentos();
-		PrescreverMedicamentoModeView modeView = new PrescreverMedicamentoModeView(listPaciente,listMedicamento);
+		PrescreverMedicamentoModelView modeView = new PrescreverMedicamentoModelView(listPaciente,listMedicamento);
 
 		return ok(views.html.prescrever_medicamento.render(modeView));
 	}

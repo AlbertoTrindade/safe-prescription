@@ -1,4 +1,4 @@
-@(lists: views.PrescreverMedicamentoModeView)
+@(lists: views.PrescreverMedicamentoModelView)
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -86,17 +86,18 @@
                     </div>
                   </div>
 
-                  <div id="lista_medicamentos" class="list-group list-scroll">
+                  <div id="lista_medicamentos" class="list-group list-scroll">                    
 
-                    <div class="list-group-item">
+                    @for(medicamento <- lists.medicamentoList){
+                      <div class="list-group-item">
                         <div class="row">
                           <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">Alenia</p>
+                            <p style="margin-bottom:0px;">@medicamento.getNome()</p>
                           </div>
                           <div class="col-lg-1">
-                            <input id="alenia" type="checkbox" onclick="if(this.checked){$('#expansao_alenia').collapse('show')}else{$('#expansao_alenia').collapse('hide')}">
+                            <input id="@medicamento.getIdMedicamento()" type="checkbox" onclick="if(this.checked){$('#expansao_@medicamento.getIdMedicamento()').collapse('show')}else{$('#expansao_@medicamento.getIdMedicamento()').collapse('hide')}">
                           </div>
-                          <div id="expansao_alenia" class="collapse expansao" role="tabpanel">
+                          <div id="expansao_@medicamento.getIdMedicamento()" class="collapse expansao" role="tabpanel">
                             <div class="row">
                               <div class="col-lg-6">
                                 <textarea id="posologia_input" type="text" class="form-control" placeholder="Posologia" rows="3"></textarea>
@@ -107,20 +108,7 @@
                             </div>
                           </div>
                         </div>
-                    </div>
-
-                    @for(medicamento <- lists.medicamentoList){
-
-                    <div class="list-group-item">
-                        <div class="row">
-                          <div class="col-lg-11">
-                            <p style="margin-bottom:0px;">@medicamento.getNome()</p>
-                          </div>
-                          <div class="col-lg-1">
-                            <input type="checkbox">
-                          </div>
-                        </div>
-                    </div>
+                    </div>                    
                     }
                 <!--************************************************-->
 

@@ -5,7 +5,7 @@ import models.Fachada;
 import java.util.List;
 import models.entidades.QuadroClinico;
 import models.entidades.Farmaco;
-import views.ListViewModel;
+import views.CadastrarPacienteModelView;
 
 
 public class CRCadastroPaciente extends Controller {
@@ -18,7 +18,7 @@ public class CRCadastroPaciente extends Controller {
 		List<QuadroClinico> quadroList = fachada.listarQuadrosClinicos();
 		List<Farmaco> farmacoList = fachada.listarFarmacos();
 
-		ListViewModel listView = new ListViewModel(farmacoList,quadroList);		
+		CadastrarPacienteModelView listView = new CadastrarPacienteModelView(farmacoList,quadroList);		
 
 		return ok(views.html.cadastrar_paciente.render(listView));
 	}
