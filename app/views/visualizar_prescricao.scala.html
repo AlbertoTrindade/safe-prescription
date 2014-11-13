@@ -93,7 +93,7 @@
 
                   <h4 class="titulo-sessao">Medicamentos</h4>
 
-                  @for(prescricaoItem <- prescricao.getPrescricaoItens()){
+                  @for(prescricaoItem <- prescricao.getPrescricaoItems()){
                   <div class="row spacing">
                     <div class="col-lg-4">
                       <p><strong>Nome do Medicamento: </strong>@prescricaoItem.getMedicamento().getNome()</p>

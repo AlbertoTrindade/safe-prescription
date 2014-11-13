@@ -69,9 +69,14 @@ public class CRPrescricaoMedicamento extends Controller {
 		
 		
 		List<PrescricaoItem> lista = new ArrayList<PrescricaoItem>();
-			
+		
+		Logger.info(String.valueOf(listaMedicamento.size()));
+		
 		for(int i=0;i<listaMedicamento.size();i++){
 			
+			
+			Logger.info(posologia[i]);
+			Logger.info(via[i]);
 			lista.add(new PrescricaoItem(listaMedicamento.get(i), posologia[i], via[i]));
 			
 		}
@@ -80,9 +85,8 @@ public class CRPrescricaoMedicamento extends Controller {
 		
 		Prescricao prescricaoFinal= Fachada.getInstancia().prescreverMedicamentos(prescricao);	
 		
-		Logger.info(prescricaoFinal.getInteracoesFarmaco().get(0).getFarmaco1().getNome());
 		
-		return ok();
+		return ok(views.html.visualizar_prescricao.render(prescricaoFinal));
 
 	}
 
