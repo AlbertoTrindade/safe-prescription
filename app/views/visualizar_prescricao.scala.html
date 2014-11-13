@@ -35,6 +35,19 @@
 
       <!--start intro-->
       <div class="intro-2" >
+
+
+            @if(!prescricao.getInteracoesFarmaco().isEmpty || !prescricao.getInteracoesQuadroClinico().isEmpty ){
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                @for(interacaoFarmaco <- prescricao.getInteracoesFarmaco()){
+                  <strong>Interação @{interacaoFarmaco.getGrau()}</strong> @interacaoFarmaco.getDescricao()
+                } 
+                @for(interacaoQuadroClinico <- prescricao.getInteracoesQuadroClinico()){
+                  <strong>Interação @{interacaoQuadroClinico.getGrau()}</strong> @interacaoQuadroClinico.getDescricao()
+                } 
+              </div>
+            }
       
             <h3 class="titulo">Prescrição</h3>
 
@@ -106,6 +119,7 @@
                     </div>
                   }
                    
+                   </div>
                     
                 <!--************************************************-->
 
