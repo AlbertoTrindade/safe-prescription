@@ -1,10 +1,18 @@
 package controllers;
 
+import play.Logger;
 import play.mvc.*;
 import models.Fachada;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import models.entidades.Paciente;
 import models.entidades.Medicamento;
+import models.entidades.Prescricao;
+import models.entidades.PrescricaoItem;
+import models.entidades.QuadroClinico;
 import views.PrescreverMedicamentoModelView;
 
 public class CRPrescricaoMedicamento extends Controller {
@@ -22,8 +30,59 @@ public class CRPrescricaoMedicamento extends Controller {
 	}
 
 	public static Result prescreverMedicamento() {
-
-		return TODO;
+		final Map<String, String[]> values = request().body().asFormUrlEncoded();
+		
+		Paciente pacienteSelecionado = null;
+		
+		for(Paciente paciente : Fachada.getInstancia().listarPacientes()){
+			
+			if(paciente.getIdPaciente()==Integer.valueOf(values.get("paciente")[0])){
+				pacienteSelecionado=paciente;
+			}			
+		}
+		
+		String[] medicamentos = values.get("medicamento");
+		
+		String[] posologia = values.get("posologia");
+		
+		String[] via = values.get("via");
+		
+		List<Medicamento> bancoListaMedicamentos = Fachada.getInstancia().listarMedicamentos();
+		
+		List<Medicamento> listaMedicamento = new ArrayList<Medicamento>();
+		
+		String[] medicamentosSelecionados = values.get("medicamento");
+		
+		for(Medicamento medicamento: bancoListaMedicamentos){
+			
+			for(String medicamentoSelecionado :medicamentosSelecionados){
+				
+				if(medicamentoSelecionado.equals(String.valueOf(medicamento.getIdMedicamento()))){
+					
+					listaMedicamento.add(medicamento);
+				}
+				
+			}
+			
+		}
+		
+		
+		
+		List<PrescricaoItem> lista = new ArrayList<PrescricaoItem>();
+			
+		for(int i=0;i<listaMedicamento.size();i++){
+			
+			lista.add(new PrescricaoItem(listaMedicamento.get(i), posologia[i], via[i]));
+			
+		}
+		
+		Prescricao prescricao = new Prescricao(pacienteSelecionado,lista);
+		
+		Prescricao prescricaoFinal= Fachada.getInstancia().prescreverMedicamentos(prescricao);	
+		
+		Logger.info(prescricaoFinal.getInteracoesFarmaco().get(0).getFarmaco1().getNome());
+		
+		return ok();
 
 	}
 
