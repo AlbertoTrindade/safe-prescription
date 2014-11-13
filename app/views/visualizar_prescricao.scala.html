@@ -1,0 +1,130 @@
+@(prescricao: models.entidades.Prescricao)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>SafePrescription - Documentos</title>
+
+    <link rel="icon"  href="@routes.Assets.at("/public/images/" ,"favicon.gif")" type="image/x-icon"/>
+    <link rel="shortcut icon" href="@routes.Assets.at("/public/images/" , "favicon.gif")" type="image/x-icon"/> 
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/", "styles.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap-theme.css")"/>
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.at("/public/stylesheets/","bootstrap.css")"/>
+
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "jquery-1.11.1.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "bootstrap.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("/public/javascripts/", "scripts.js")"></script>
+    		
+  </head>
+
+  <body>
+  	
+    <!--start container-->
+    <div id="container">
+
+      <!--start header-->
+      <header>  
+        <!--start logo-->
+        <a href="index" id="logo"><img src="@routes.Assets.at("/public/images/", "logo.png")" alt="logo"/></a> 
+      	<!--end logo-->
+      
+    	</header>
+      <!--end header-->
+
+      <!--start intro-->
+      <div class="intro-2" >
+      
+            <h3 class="titulo">Prescrição</h3>
+
+              <!--Informação Paciente-->
+              <h4 class="titulo-sessao">Informações do Paciente</h4>
+
+                  <div class="row spacing">
+                    <div class="col-lg-8">
+                      <p><strong>Nome: </strong>@prescricao.getPaciente().getNome()</p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p><strong>CPF: </strong>@prescricao.getPaciente().getCpf()</p>
+                    </div>
+                    
+                  </div>
+                  <div class="row spacing">
+                    <div class="col-lg-4">
+                      <p><strong>Data de Nascimento: </strong>@prescricao.getPaciente().getDataNasc()</p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p><strong>Telefone Celular: </strong>@prescricao.getPaciente().getTelefoneCelular()</p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p><strong>Telefone Fixo: </strong>@prescricao.getPaciente().getTelefoneFixo()</p>
+                    </div>
+
+                  </div>
+
+                  <h5 class="titulo-sessao">Endereço</h5>
+                  <div class="row spacing">
+                    <div class="col-lg-6">
+                      <p><strong>Logradouro: </strong>@prescricao.getPaciente().getEndereco().getLogradouro()</p>
+                    </div>
+                    <div class="col-lg-2">
+                      <p><strong>Numero: </strong>@prescricao.getPaciente().getEndereco().getNumero()</p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p><strong>Complemento: </strong>@prescricao.getPaciente().getEndereco().getComplemento()</p>
+                    </div>
+
+                  </div>
+                  <div class="row spacing">
+                    <div class="col-lg-3">
+                      <p><strong>Bairro: </strong>@prescricao.getPaciente().getEndereco().getBairro()</p>
+                    </div>
+                    <div class="col-lg-4">
+                      <p><strong>Cidade: </strong>@prescricao.getPaciente().getEndereco().getCidade()</p>
+                    </div>
+                    <div class="col-lg-2">
+                      <p><strong>UF: </strong>@prescricao.getPaciente().getEndereco().getEstado()</p>
+                    </div>
+                  </div>
+              <!--*******************************************-->          
+
+                <!--Medicamentos-->
+
+                  <h4 class="titulo-sessao">Medicamentos</h4>
+
+                  @for(prescricaoItem <- prescricao.getPrescricaoItens()){
+                  <div class="row spacing">
+                    <div class="col-lg-4">
+                      <p><strong>Nome do Medicamento: </strong>@prescricaoItem.getMedicamento().getNome()</p>
+                    </div>
+                    <div class="col-lg-6">
+                      <p><strong>Posologia: </strong>@prescricaoItem.getPosologia()</p>
+                    </div>
+                    <div class="col-lg-2">
+                      <p><strong>Via: </strong>@prescricaoItem.getVia()</p>
+                    </div>
+                  }
+                   
+                    
+                <!--************************************************-->
+
+              </div>
+
+
+      </div>
+      <!--end intro-->
+
+    </div>
+     <!--end container-->
+     
+    <!--start footer-->
+    <footer>
+      <div class="container">  
+        <div id="FooterTwo"> © 2014 SafePrescription </div>
+      </div>
+    </footer>
+    <!--end footer-->
+
+  </body>
+</html>
