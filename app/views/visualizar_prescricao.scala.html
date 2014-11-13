@@ -37,15 +37,19 @@
       <div class="intro-2" >
 
 
-            @if(!prescricao.getInteracoesFarmaco().isEmpty || !prescricao.getInteracoesQuadroClinico().isEmpty ){
+            @if(!prescricao.getInteracoesFarmaco().isEmpty || !prescricao.getInteracoesQuadroClinico().isEmpty || !prescricao.getAlergias().isEmpty){
               <div class="alert alert-warning alert-dismissible" role="alert">
                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 @for(interacaoFarmaco <- prescricao.getInteracoesFarmaco()){
-                  <strong>Interação @{interacaoFarmaco.getGrau()}</strong> @interacaoFarmaco.getDescricao()
+                  <strong>Interação @{interacaoFarmaco.getGrau()}: @{interacaoFarmaco.getFarmaco1()} e @{interacaoFarmaco.getFarmaco2()}</strong> <p>@interacaoFarmaco.getDescricao()</p>
                 } 
                 @for(interacaoQuadroClinico <- prescricao.getInteracoesQuadroClinico()){
-                  <strong>Interação @{interacaoQuadroClinico.getGrau()}</strong> @interacaoQuadroClinico.getDescricao()
+                  <strong>Interação @{interacaoQuadroClinico.getGrau()}: @{interacaoFarmaco.getFarmaco()} e @{interacaoFarmaco.getQuadroClinico()}</strong> <p>@interacaoQuadroClinico.getDescricao()</p>
                 } 
+                @for(alergia <- prescricao.getAlergias()){
+                  <strong>Alergia a @{alergia.getNome()}</strong>
+                } 
+
               </div>
             }
       
